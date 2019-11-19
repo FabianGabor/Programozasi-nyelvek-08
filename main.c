@@ -44,7 +44,6 @@ void print_array(int arr[], int n)
 int palindrome (char string[])
 {
     char *p_string = string;
-    int palindrom = 1;
     unsigned long long i = 0, j = 0, str_len = strlen(p_string);
     char *left;
     char *right;
@@ -55,7 +54,7 @@ int palindrome (char string[])
     char left_char = *left; // ONLY FOR DEBUG
     char right_char = *right; // ONLY FOR DEBUG
 
-    while ( ((i <= str_len/2) || (j<= str_len/2)) && palindrom )
+    while ( ((i <= str_len/2) || (j<= str_len/2)) )
     {
         while (*(left + i) - 'A' < 0)
             i++;
@@ -69,10 +68,10 @@ int palindrome (char string[])
             j++;
         }
         else
-            palindrom = 0;
+            return 0
     }
 
-    return palindrom;
+    return 1;
 }
 
 int main()
