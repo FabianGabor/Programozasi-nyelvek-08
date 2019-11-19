@@ -68,7 +68,7 @@ int palindrome (char string[])
             j++;
         }
         else
-            return 0
+            return 0;
     }
 
     return 1;
